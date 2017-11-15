@@ -1,2 +1,1 @@
-# RAVE
-RAVE is the Radio-Aware Voice Engine, a concept *push-to-talk* (PTT) Android application by the [Commotion Wireless Project](https://commotionwireless.net) and [Throneless Tech](https://throneless.tech).
+RAVE is a concept for a **push-to-talk** (PTT) Android application by the [Commotion Wireless Project](https://commotionwireless.net) and [Throneless Tech](https://throneless.tech). The RAVE mobile application provides high-fidelity audio communication via a peer-to-peer Bluetooth or WiFi connection. RAVE is tolerant of unreliable or low-bandwidth radio links, and gracefully steps down to lower-bandwidth communication. Multiple RAVE devices form a multi-hop network capable of extending communication over longer distances.

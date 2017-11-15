@@ -1,2 +1,2 @@
-# rave
+# RAVE
 Radio-Aware Voice Engine

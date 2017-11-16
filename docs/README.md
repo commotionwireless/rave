@@ -5,5 +5,7 @@ RAVE is designed to be appealing for people to use for everyday communication. I
 
 However, the primary audience for RAVE is individuals that live in disaster-prone areas or areas with frequent communications issues due to accidental or intentional internet blackout. The ability for existing infrastructure to adapt to the loss of internet access is critical for organizers and community first-responders. This has been borne out by the work we’ve conducted deploying networks within dozens of underserved and/or vulnerable communities around the world over the past decade.
 
-## Design Mockups
-
+## Preliminary Design Mockups
+![Contacts](img/contacts.png)
+![Menu](img/menu.png)
+![Channel](img/channel.png)

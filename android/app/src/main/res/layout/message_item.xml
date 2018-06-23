@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="raveMessage"
+            type="net.commotionwireless.ravedbtest2.model.RaveMessage"/>
+        <variable name="callback"
+            type="net.commotionwireless.ravedbtest2.ui.MessageClickCallback"/>
+    </data>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bind:cardBackgroundColor="@color/message_light_background"
+        android:layout_marginStart="@dimen/message_horizontal_margin"
+        android:layout_marginEnd="@dimen/message_horizontal_margin"
+
+        android:minHeight="@dimen/message_minHeight"
+        android:onClick="@{() ->  callback.onClick(raveMessage)}"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        bind:cardUseCompatPadding="true">
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/message_padding"
+                android:text="@{raveMessage.getContents}"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

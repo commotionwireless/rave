@@ -1,0 +1,98 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "340794eb3f236b3a2646c886378f9e66",
+    "entities": [
+      {
+        "tableName": "raveMessages",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nodeAddress` INTEGER NOT NULL, `contents` TEXT, `timestamp` INTEGER, FOREIGN KEY(`nodeAddress`) REFERENCES `raveNodes`(`address`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nodeAddress",
+            "columnName": "nodeAddress",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contents",
+            "columnName": "contents",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_raveMessages_nodeAddress",
+            "unique": false,
+            "columnNames": [
+              "nodeAddress"
+            ],
+            "createSql": "CREATE  INDEX `index_raveMessages_nodeAddress` ON `${TABLE_NAME}` (`nodeAddress`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "raveNodes",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "nodeAddress"
+            ],
+            "referencedColumns": [
+              "address"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "raveNodes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`address` INTEGER NOT NULL, `alias` TEXT, PRIMARY KEY(`address`))",
+        "fields": [
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "alias",
+            "columnName": "alias",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "address"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"340794eb3f236b3a2646c886378f9e66\")"
+    ]
+  }
+}

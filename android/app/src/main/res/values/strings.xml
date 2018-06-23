@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RAVE</string>
+    <string name="no_messagess">No comments</string>
+    <string name="loading_messages">Loading messages...</string>
+    <string name="loading_nodes">Loading nodes...</string>
+    <string name="cd_nodes_list">Node list</string>
+    <string name="cd_messages_list">Message list</string>
+    <string name="cd_node_alias">Alias of the node</string>
+</resources>

@@ -1,0 +1,23 @@
+[package]
+name = "rave"
+version = "0.1.0"
+authors = ["Josh King <jking@chambana.net>"]
+
+[dependencies]
+mdp = { git = "https://github.com/commotionwireless/clatter" }
+nom = "4.0"
+cookie-factory = "0.2"
+bytes = "0.4"
+log = "0.4"
+futures = "0.1"
+tokio = "0.1"
+env_logger = "0.5"
+clap = "~2.31"
+
+[lib]
+name = "rave"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rave-daemon"
+path = "src/main.rs"

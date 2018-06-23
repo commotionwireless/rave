@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="item_horizontal_margin">8dp</dimen>
+    <dimen name="message_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="message_padding">8dp</dimen>
+    <dimen name="message_minHeight">64dp</dimen>
+    <dimen name="node_item_min_height">100dp</dimen>
+</resources>
